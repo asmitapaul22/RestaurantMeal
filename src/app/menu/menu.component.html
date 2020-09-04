@@ -1,0 +1,34 @@
+<div class="Menu" id="menu">
+    <div class="fluid-container  heading">
+        <h3 class="text-center text-light" data-aos="fade-left" data-aos-duration="2000"  data-aos-easing="linear">Menu</h3>
+        <p class="text-center text-light" data-aos="fade-right" data-aos-duration="2000"  data-aos-easing="linear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, esse!</p>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+        <button (click)="details(1)" data-aos="flip-left" data-aos-duration="2000"  data-aos-easing="linear">Breakfast</button>
+    <button (click)="details(2)" data-aos="flip-left" data-aos-duration="2000"  data-aos-easing="linear">Lunch</button>
+    <button (click)="details(3)" data-aos="flip-left" data-aos-duration="2000"  data-aos-easing="linear">Dinner</button>
+    </div>
+    
+    <div class="card " *ngFor="let item of menudetails">
+        <div class="card-body">
+            <div class="row" >
+            <div class="col-md-3 text-center">
+                <img data-aos="flip-left" data-aos-duration="2000"  data-aos-easing="linear" src="{{item.image}}" alt="menu food images">
+            </div>
+            <div class="col-md-7 text-center">
+                <h4>{{item.name}}</h4> 
+                <p>{{item.description}}</p>
+            </div>
+            <div class="col text-center">
+                <p class="amount" data-aos="fade-left" data-aos-duration="2000"  data-aos-easing="linear">{{item.price}}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    

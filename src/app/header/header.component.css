@@ -1,0 +1,123 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.jumbotron{
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0, 0, 0, 0.8)), url('https://image.freepik.com/free-psd/top-view-fast-food-black-background-mock-up_23-2148321326.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
+}
+.jumbotron h1{
+    margin: 30px 0;
+    font-size: 4rem;
+    
+}
+.intro{
+    padding-top: 250px;
+}
+.reserve{
+    border: 2px solid white;
+    
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.4rem;
+
+
+}
+.reserve:hover{
+    background-color: white;
+    color: red;
+}
+.logo{
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 30px 35px;
+    border: 1px solid white;
+}
+.logo:hover{
+    background-color: rgba(250, 213, 7, 0.3);
+    color:white;
+    cursor:default;
+}
+
+button:focus{
+    outline: none;
+}
+.color-change{
+    animation: colorchangemeal 5s infinite;
+}
+@keyframes colorchangemeal{
+    0%{color:yellow;}
+    25%{color: orangered;}
+    50%{color: orange;}
+    75%{color:  red;}
+    100%{color: white;}
+}
+.navbar-nav li{
+    margin: 0 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    
+}
+
+.nav-link:hover{
+    color: white !important;
+    text-decoration: underline;
+    
+}
+.navbar{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width:1000px){
+
+    .nav-link a{
+        margin: 0px 5px 0px 17px;
+        margin-top: 30px;
+        background-color: yellow;
+
+    }
+    
+    .nav-link:hover{
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+    .jumbotron h1{
+        /* margin: 30px 0; */
+        font-size: 3rem;
+        
+    }
+    .reserve{
+        border: 1px solid white;
+        
+        background-color: transparent;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    
+    
+    }
+    .logo{
+        padding: 20px 25px;
+    }
+    
+}
+@media only screen and (max-width:420px){
+    .jumbotron h1{
+        font-size: 1.5rem !important;
+        
+    }
+    .reserve{
+        font-size:1rem;
+    }
+}
+

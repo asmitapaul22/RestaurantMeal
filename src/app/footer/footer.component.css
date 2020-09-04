@@ -1,0 +1,43 @@
+
+.fluid-container{
+    background-color:#333333 ;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+.container{
+    background-color:#333333 ;
+}
+h4{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+p{
+    color: white;
+}
+button{
+    background-color: transparent;
+    border-color: red;
+    color: red;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-color: red;
+    color: white;
+
+}
+img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+}
+@media only screen and (max-width:780px){
+    h4{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.8rem
+    }
+ 
+}

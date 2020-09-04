@@ -1,0 +1,25 @@
+<div class="service" id="services">
+    <div class="fluid-container">
+        <div class="heading text-center text-light">
+            <h3 data-aos="fade-left" data-aos-duration="2000"  data-aos-easing="linear">Other Services</h3>
+            <p data-aos="fade-right" data-aos-duration="2000"  data-aos-easing="linear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nostrum.</p>
+        
+        </div>
+    </div>
+        <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-3" *ngFor="let service of servicedetails">
+                <div class="card">
+                    <img class="card-img-top d-block mx-auto" data-aos="flip-left" data-aos-duration="2000"  data-aos-easing="linear" src="{{service.picture}}" alt="service images">
+                    <div class="card-body">
+                      <p class="card-text text-center" data-aos="flip-right" data-aos-duration="2000"  data-aos-easing="linear"><span>{{service.title}}</span><br>{{service.description}}</p>
+                    </div>
+                  </div>
+            </div>
+            
+    
+        </div>
+    </div>
+    </div>
+    
+

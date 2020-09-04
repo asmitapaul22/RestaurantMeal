@@ -1,0 +1,35 @@
+span{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.service{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+img{
+    width: 140px;
+    height: 120px;
+}
+
+.container{
+    padding: 10px;
+}
+
+.heading{
+    padding: 40px;
+    margin-top: 20px;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7)), url('https://image.freepik.com/free-vector/vector-illustration-culinary-banner-barbecue-background-with-grilled-meat-sausages-vegetables-sauces_1441-463.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+        
+        
+}
+@media only screen and (max-width:780px){
+    h3{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}

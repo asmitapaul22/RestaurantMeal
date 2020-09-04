@@ -1,0 +1,43 @@
+.fluid-container{
+    background-color: #ebebe0;
+    
+    overflow-x: hidden;
+}
+
+
+.heading{
+    padding: 40px;
+    margin-top: 20px;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7)), url('https://image.freepik.com/free-vector/vector-illustration-culinary-banner-barbecue-background-with-grilled-meat-sausages-vegetables-sauces_1441-463.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+        overflow-x: hidden; 
+        
+}
+.container{
+    padding: 20px;
+    min-height: 75vh;
+    overflow-x: hidden;
+}
+button{
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 5px 30px;
+}
+button:hover{
+    background-color: red;
+    color: white;
+}
+@media only screen and (max-width:780px){
+    h3{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size:1rem;
+    }
+}

@@ -1,0 +1,90 @@
+<div class="reservation" id="reserve">
+    <div class="fluid-container">
+    
+            <div class="heading text-center text-light heading">
+                <h3 data-aos="fade-left" data-aos-duration="2000"  data-aos-easing="linear">Reservation</h3>
+                <p data-aos="fade-right" data-aos-duration="2000"  data-aos-easing="linear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, recusandae?</p>
+            </div>
+            <div class="container d-flex h-70">
+        <div class="card justify-content-center align-self-center mx-auto" data-aos="flip-left" data-aos-duration="2000"  data-aos-easing="linear">
+            <div class="card-body " >
+                <div *ngIf="submitted">
+                    <h2 class="text-danger">YOUR SEATS ARE RESERVED!!!</h2>
+                </div>
+                <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+                    
+    <div class="row ">
+        <div class="form-group col-md-4 col-12">
+            <label>Name:</label>
+            <input type="text" required #name="ngModel" pattern="[A-Za-z ]{1,23}$" [class.is-invalid]="name.invalid && name.touched" class="form-control"  name="username" placeholder="Name" [(ngModel)]="userModel.name">
+            <!-- <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required.</small> -->
+            <div *ngIf="name.errors && (name.invalid || name.touched)">
+                <small class="text-danger" *ngIf="name.errors.required">Name is required.</small>
+                <small class="text-danger" *ngIf="name.errors.pattern">Invalid Name Format.</small> 
+            </div>
+            <br>
+        </div>
+        <div class="form-group col-md-4 col-12">
+            <label>Email:</label>
+            <input type="email" required #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [class.is-invalid]="email.invalid && email.touched" class="form-control" name="email" placeholder="Email" [(ngModel)]="userModel.email">
+            <div *ngIf="email.errors && (email.invalid || email.touched)">
+                <small class="text-danger" *ngIf="email.errors.required">Email is required.</small>
+                <small class="text-danger" *ngIf="email.errors.pattern">Invalid Email Format.</small> 
+            </div>
+            <br>
+        </div>
+        <div class="form-group col-md-4 col-12">
+            <label>Phone Number:</label>
+            <input type="tel" required  #phone="ngModel" pattern="^\d{10}$" [class.is-invalid]="phone.invalid && phone.touched" class="form-control" name="phone" placeholder="" [(ngModel)]="userModel.phone">
+            <br>
+            <!-- <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone number is required and must be 10 digits.</small> -->
+    <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+        <small class="text-danger" *ngIf="phone.errors.required">Phone number is required.</small>
+        <small class="text-danger" *ngIf="phone.errors.pattern">Phone number must be of 10 digits.</small>
+    </div>      
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4 col-12">
+            <label>No. of Persons:</label>
+            <select (blur)="validatePerson(person.value)" (change)="validatePerson(person.value)" #person="ngModel" [class.is-invalid]="personHasError && person.touched" class="custom-select" name="persons" [(ngModel)]="userModel.person">
+              <option value="default">Reserve for</option>
+              <option *ngFor="let person of persons">{{person}}</option>
+            </select>
+            <small class="text-danger" [class.d-none]="!personHasError || person.untouched">Please choose a category</small>
+            <br>
+    
+        </div>
+        <div class="col-md-4 col-12">
+            <label>Date:</label>
+            <input type="text" class="form-control" name="date" placeholder="dd/mm/yyyy" [(ngModel)]="userModel.date">
+            <br>
+        </div>
+        <div class="col-md-4 col-12">
+            <label>Time:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="timePreference" value="morning" [(ngModel)]="userModel.timePreference">
+                <label class="form-check-label">Morning (8AM - 11AM)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="timePreference" value="afternoon" [(ngModel)]="userModel.timePreference">
+                <label class="form-check-label">Afternoon (12PM - 4PM)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="timePreference" value="night" [(ngModel)]="userModel.timePreference">
+                <label class="form-check-label">Night (8PM - 10:30PM)</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button [disabled]="userForm.form.invalid || personHasError" type="submit" class="d-block mx-auto">Reserve Now</button>
+        <br>
+    </div>
+    </div>
+    </form>
+            </div>
+          </div>
+          </div>
+    </div>
+    </div>
